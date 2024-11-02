@@ -1,17 +1,24 @@
 {
-  "name": "nuxt-app",
-  "private": true,
-  "type": "module",
-  "scripts": {
-    "build": "nuxt build",
-    "dev": "nuxt dev",
-    "generate": "nuxt generate",
-    "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
-  },
-  "dependencies": {
-    "nuxt": "^3.13.2",
-    "vue": "latest",
-    "vue-router": "latest"
-  }
+	"name": "nuxt-app",
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"build": "nuxt build",
+		"build:staging": "nuxt build --dotenv .env.staging",
+		"build:dev": "nuxt build --dotenv .env.development",
+		"dev": "nuxt dev --dotenv .env.development",
+		"generate": "nuxt generate",
+		"preview": "nuxt preview",
+		"postinstall": "nuxt prepare"
+	},
+	"dependencies": {
+		"@vite-pwa/nuxt": "^0.10.6",
+		"nuxt": "^3.13.2",
+		"vue": "latest",
+		"vue-router": "latest"
+	},
+	"devDependencies": {
+		"vite-plugin-vuetify": "^2.0.4",
+		"vuetify": "^3.7.3"
+	}
 }
