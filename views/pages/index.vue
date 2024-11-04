@@ -1,7 +1,5 @@
 <template>
-	<v-app>
-		<NuxtPage />
-	</v-app>
+	<div>index</div>
 </template>
 
 <script setup></script>

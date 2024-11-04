@@ -12,6 +12,7 @@
 		"postinstall": "nuxt prepare"
 	},
 	"dependencies": {
+		"@mdi/font": "^7.4.47",
 		"@vite-pwa/nuxt": "^0.10.6",
 		"nuxt": "^3.13.2",
 		"vue": "latest",

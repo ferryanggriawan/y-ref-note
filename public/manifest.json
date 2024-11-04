@@ -1,0 +1,12 @@
+{
+	"id": "/?source=pwa",
+	"theme_color": "#e89726",
+	"background_color": "#ffffff",
+	"display": "standalone",
+	"dir": "auto",
+	"lang": "en-ID",
+	"name": "Y-REF Note",
+	"short_name": "Y-R Note",
+	"start_url": "/?source=pwa",
+	"scope": "/"
+}

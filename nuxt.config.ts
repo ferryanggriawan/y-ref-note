@@ -5,6 +5,19 @@ export default defineNuxtConfig({
 	compatibilityDate: "2024-04-03",
 	ssr: false,
 	devtools: { enabled: true },
+
+	app: {
+		head: {
+			// script: [{ src: "services/main.sw.js" }, { src: "sw.js" }],
+			link: [
+				{
+					rel: "manifest",
+					href: "/manifest.json",
+				},
+			],
+		},
+	},
+
 	runtimeConfig: {
 		public: {
 			version: process.env.VERSION,
@@ -13,7 +26,6 @@ export default defineNuxtConfig({
 	},
 
 	modules: [
-		"@vite-pwa/nuxt",
 		(_options, nuxt) => {
 			nuxt.hooks.hook("vite:extendConfig", (config) => {
 				// @ts-expect-error
@@ -48,31 +60,5 @@ export default defineNuxtConfig({
 
 	build: {
 		transpile: ["vuetify"],
-	},
-
-	pwa: {
-		injectRegister: "auto",
-		includeAssets: ["favicon.ico", "apple-touch-icon.png", "mask-icon.svg"],
-		devOptions: {
-			enabled: true,
-		},
-		manifest: {
-			name: "Y-REF Note",
-			short_name: "MyApp",
-			description: "Y-REF Note description",
-			theme_color: "#ffffff",
-			icons: [
-				{
-					src: "pwa-192x192.png",
-					sizes: "192x192",
-					type: "image/png",
-				},
-				{
-					src: "pwa-512x512.png",
-					sizes: "512x512",
-					type: "image/png",
-				},
-			],
-		},
 	},
 })
