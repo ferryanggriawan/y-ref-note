@@ -8,7 +8,7 @@ export default defineNuxtConfig({
 
 	app: {
 		head: {
-			// script: [{ src: "services/main.sw.js" }, { src: "sw.js" }],
+			title: "Y-Ref Note",
 			link: [
 				{
 					rel: "manifest",
@@ -40,6 +40,10 @@ export default defineNuxtConfig({
 				path: "~/views/components",
 				global: true,
 			},
+			{
+				path: "~/views/sections",
+				global: true,
+			},
 		],
 	},
 
@@ -48,6 +52,10 @@ export default defineNuxtConfig({
 		layouts: "views/layouts",
 		plugins: "apps/plugins",
 		middleware: "apps/middleware",
+	},
+
+	imports: {
+		dirs: ["stores", "apps/stores"],
 	},
 
 	vite: {
